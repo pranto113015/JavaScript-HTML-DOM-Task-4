@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="JavaScript HTML DOM,Pranto Kumar">
+    <meta name="description" content="JavaScript HTML DOM Manupulaion">
+
+    <title>JavaScript HTML DOM</title>
+</head>
+
+<body id="container">
+    <h1 style="color: red;">Javascript HTML DOM Manipulation</h1>
+    <hr>
+    <div id="content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis magnam, totam nihil aut et unde
+        aperiam officia illum autem voluptatem sint esse, laboriosam atque quis delectus accusantium fuga neque possimus
+        tempora quos consequuntur amet rem! Tempora rem nulla velit eaque.
+    </div><br>
+
+
+
+    <div style="font-weight: bold;">Change Font Size :</div>
+    <button id="inc">Increase+</button>
+    <button id="dec">Decrease-</button>
+
+    <br> <br>
+
+    <div style="font-weight: bold;">Change Font Color :</div>
+    <button id="red">Red</button>
+    <button id="green">Green</button>
+
+    <br> <br>
+
+    <div style="font-weight: bold;">Change Background Color :</div>
+    <button id="Silver">Silver</button>
+    <button id="lightBlue">LightBlue</button>
+
+
+    <br> <br>
+
+    <div style="font-weight: bold;">Change Text-Alignment :</div>
+    <button id="left">Left</button>
+    <button id="right">Right</button>
+    <button id="center">Center</button>
+    <button id="justify">Justify</button>
+
+
+
+    <script>
+
+        // secletor of font size
+        let button1 = document.getElementById("inc");
+        let button2 = document.getElementById("dec");
+        let content = document.getElementById("content");
+
+
+        // selector of font color
+        let red = document.getElementById("red");
+        let green = document.getElementById("green");
+
+        // selector of background color
+        let Silver = document.getElementById("Silver");
+        let lightBlue = document.getElementById("lightBlue");
+
+
+        // selector of text-alignment
+        let left = document.getElementById("left");
+        let right = document.getElementById("right");
+        let center = document.getElementById("center");
+
+
+        // funtion of font size
+        let currentforntsize = 10;
+
+        button1.addEventListener("click", function () {
+            currentforntsize += 12;
+            content.style.fontSize = currentforntsize + "px";
+        });
+
+        button2.addEventListener("click", function () {
+            currentforntsize -= 12;
+            content.style.fontSize = currentforntsize + "px";
+        });
+
+
+        // function of font color
+        red.addEventListener("click", function () {
+            content.style.color = "red";
+        });
+
+        green.addEventListener("click", function () {
+            content.style.color = "green";
+        });
+
+
+
+        // function of background color
+        Silver.addEventListener("click", function () {
+            container.style.backgroundColor = "Silver";
+        });
+
+        lightBlue.addEventListener("click", function () {
+            container.style.backgroundColor = "lightBlue";
+        });
+
+
+
+        // function of text-alignment
+        left.addEventListener("click", function () {
+            content.style.textAlign = "left";
+        });
+
+        right.addEventListener("click", function () {
+            content.style.textAlign = "right";
+        });
+
+        center.addEventListener("click", function () {
+            content.style.textAlign = "center";
+        });
+
+        justify.addEventListener("click", function () {
+            content.style.textAlign = "justify";
+        });
+
+    </script>
+</body>
+
+
+</html>
